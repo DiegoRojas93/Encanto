@@ -1,0 +1,73 @@
+body {
+  width: 100%;
+  max-width: 100Vw;
+  height: 100%;
+  min-height: 100Vh;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--color-principal);
+  padding: 0 var(--space);
+  position: relative;
+}
+
+main {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+header, footer {
+  height: 5rem;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  position: relative;
+}
+
+header figure {
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+header button {
+  position: fixed;
+  right: var(--space);
+  z-index: 1000;
+}
+
+.sidebar{
+  width: 100Vw;
+  height: 100Vh;
+  background-color: aqua;
+  padding: var(--space);
+  position: absolute;
+  visibility: hidden;
+
+  animation-name: movimiento;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.show {
+  visibility: visible;
+}
+
+@keyframes movimiento {
+  from {
+    transform: translateX(100Vw);
+  }
+  to {
+    transform: translateX(-1.6rem);
+  }
+}
