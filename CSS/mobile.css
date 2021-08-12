@@ -1,28 +1,37 @@
 body {
-  width: 100%;
-  max-width: 100Vw;
-  height: 100%;
-  min-height: 100Vh;
-  height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
   background-color: var(--color-principal);
-  padding: 0 var(--space);
-  position: relative;
 }
 
 main {
-  flex-grow: 1;
+  min-width: 100Vw;
+  min-height: 100Vh;
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.padding {
+  padding: 0 var(--space);
+}
+
+.container__main {
+  flex-grow: 1;
   min-height: inherit;
+  margin-right: calc(var(--space) + 24px);
 }
 
 header, footer {
-  height: 5rem;
-  padding: 1rem 0;
+  width: 100%;
+  height: 10rem;
+  padding: var(--space) 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 header {
@@ -45,29 +54,48 @@ header button {
 }
 
 .sidebar{
+  display: none;
+}
+
+.show {
+  display: initial;
   width: 100Vw;
   height: 100Vh;
   background-color: aqua;
   padding: var(--space);
-  position: absolute;
-  visibility: hidden;
+  overflow: hidden;
+  transform: translateX(100Vw);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 
   animation-name: movimiento;
-  animation-duration: 0.3s;
-  animation-timing-function: ease;
+  animation-duration: 0.3ss;
+  animation-timing-function: ease-out;
   animation-direction: normal;
   animation-fill-mode: forwards;
-}
-
-.show {
-  visibility: visible;
 }
 
 @keyframes movimiento {
   from {
     transform: translateX(100Vw);
+    border-radius: 25% 0 0 25%;
   }
   to {
     transform: translateX(-1.6rem);
+    border-radius: 0%;
   }
+}
+
+
+/* Hero */
+
+.container__main-hero {
+  width: 100Vw;
+  height: 100Vh;
+  background-image: url("https://vimeo.com/249616407");
+  background-repeat: no-repeat;
 }
