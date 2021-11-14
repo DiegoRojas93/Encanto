@@ -1,9 +1,10 @@
 body {
-  min-height: 100%;
-  min-width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
   width: auto;
   height: auto;
   background-color: var(--color-principal);
+  position: relative;
 }
 
 main {
@@ -13,10 +14,21 @@ main {
   height: auto;
   display: flex;
   flex-flow: column nowrap;
+  background-color: var(--color-secundario);
 }
 
-.padding {
-  padding: 0 var(--space);
+header, footer {
+  width: 100%;
+  height: 10rem;
+  padding: var(--space);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-principal);
+}
+
+header figure {
+  height: 100%;
 }
 
 .container__main {
@@ -25,43 +37,22 @@ main {
   margin-right: calc(var(--space) + 24px);
 }
 
-header, footer {
-  width: 100%;
-  height: 10rem;
-  padding: var(--space) 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header {
-  position: relative;
-}
-
-header figure {
-  height: 100%;
-}
-
 nav {
   display: flex;
   align-items: center;
 }
 
-header button {
-  position: fixed;
-  right: var(--space);
-  z-index: 1000;
-}
-
 .sidebar{
   display: none;
+  min-width: 0Vw;
+  min-height: 0Vh;
 }
 
 .show {
-  display: initial;
-  width: 100Vw;
-  height: 100Vh;
-  background-color: aqua;
+  display: block;
+  min-width: 100Vw;
+  min-height: 100Vh;
+  background-color: rgb(41, 80, 15);
   padding: var(--space);
   overflow: hidden;
   transform: translateX(100Vw);
@@ -73,7 +64,7 @@ header button {
   z-index: 1;
 
   animation-name: movimiento;
-  animation-duration: 0.3ss;
+  animation-duration: 0.3s;
   animation-timing-function: ease-out;
   animation-direction: normal;
   animation-fill-mode: forwards;
@@ -83,19 +74,51 @@ header button {
   from {
     transform: translateX(100Vw);
     border-radius: 25% 0 0 25%;
-  }
-  to {
-    transform: translateX(-1.6rem);
-    border-radius: 0%;
-  }
+    -webkit-transform: translateX(100Vw);
+    -moz-transform: translateX(100Vw);
+    -ms-transform: translateX(100Vw);
+    -o-transform: translateX(100Vw);
 }
+  to {
+    transform: translateX(0rem);
+    border-radius: 0%;
+    -webkit-transform: translateX(0rem);
+    -moz-transform: translateX(0rem);
+    -ms-transform: translateX(0rem);
+    -o-transform: translateX(0rem);
+}
+}
+
 
 
 /* Hero */
 
-.container__main-hero {
+.container__main {
   width: 100Vw;
   height: 100Vh;
-  background-image: url("https://vimeo.com/249616407");
-  background-repeat: no-repeat;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+video{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom :0;
+  left: 0;
+  right: 0;
+}
+
+.container__main-hero{
+  width: 100Vw;
+  height: 100Vh;
+  background-color:rgba(250, 250, 250, 0.541);
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom :0;
+  left: 0;
+  right: 0;
 }

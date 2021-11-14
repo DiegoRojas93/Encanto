@@ -4,6 +4,6 @@ const d = document,
 
 d.addEventListener('DOMContentLoaded', e => {
   $buttom.addEventListener('click', e => {
-    $sidebar.classList.toggle('show')
+    $sidebar.classList.toggle('show');
   })
 })

@@ -13,40 +13,27 @@
   <title>Encanto</title>
 </head>
 <body>
+
+  <section class="sidebar">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, maxime libero totam nam cum doloremque aut debitis autem sequi asperiores, necessitatibus praesentium quam tenetur, quod aspernatur minima placeat excepturi cupiditate!</p>
+  </section>
+
   <main>
-    <header class="padding">
+    <header>
       <figure>
         <img src="./src/images/colombia-logo.png" alt="Colombia-logo">
       </figure>
-      <button id="buttom-menu" ><img src="./src/images/menu.svg" alt="menu" /></button>
+      <button id="buttom-menu"><img src="./src/images/menu.svg" alt="menu" /></button>
     </header>
 
-    <article class="container__main-hero">
-      <iframe src="https://player.vimeo.com/video/249616407" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/249616407">Valle de Cocora</a> from <a href="https://vimeo.com/user10661082">Martin Loucka</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-  <video
-  src={"https://player.vimeo.com/video/249616407"}
-  bind:duration
-  bind:buffered
-  bind:played
-  bind:seekable
-  bind:seeking
-  bind:ended
-  bind:currentTime
-  bind:playbackRate
-  bind:paused
-  bind:volume
-  bind:muted
-  bind:videoWidth
-  bind:videoHeight
-  ></video>
-      <div class="hero">
-        <h1>Encanto es Colombia</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eius, atque placeat enim tempora ad quaerat sint quasi facilis consectetur, iure hic quas earum eligendi nostrum dolores odit aspernatur consequatur.</p>
-      </div>
-    </article>
     <section class="container__main">
+      <video autoplay muted>
+        <source src="./src/videos/Encanto.mp4" type="video/mp4">
+      </video>
+      <div class="container__main-hero" style="z-index: 1">
+        <h1>Colombia mi Encanto</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, aliquid porro. Modi possimus dolores unde perspiciatis qui, voluptatum omnis ut odio optio aliquid nisi cum exercitationem expedita nam ullam incidunt.Lorem</p>
+      </div>
     </section>
 
     <footer>
@@ -54,9 +41,6 @@
     </footer>
   </main>
 
-  <section class="sidebar">
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, maxime libero totam nam cum doloremque aut debitis autem sequi asperiores, necessitatibus praesentium quam tenetur, quod aspernatur minima placeat excepturi cupiditate!</p>
-  </section>
 
   <script src="./index.js"></script>
 </body>
