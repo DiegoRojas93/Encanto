@@ -27,6 +27,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+
+  color: white;
 }
 
 h1 {
@@ -72,6 +74,8 @@ p {
   margin-block-end: 1.6rem;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+
+  color: white;
 }
 
 a {
@@ -94,6 +98,7 @@ button {
 }
 
 img {
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
