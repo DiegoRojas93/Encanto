@@ -2,7 +2,26 @@ const d = document,
       $button = d.querySelector('#button-menu'),
       $sidebar = d.querySelector('.sidebar'),
       $slider = d.querySelector('.slider').querySelectorAll('img'),
-      $ul = d.querySelector('ul');
+      $ul = d.querySelector('ul'),
+      $videos = d.querySelectorAll('video[data-smart-video]'),
+      options = {
+        threshold: 0.5
+      },
+      callback = (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.play()
+          } else {
+            entry.target.pause()
+          }
+
+          d.addEventListener('visibilitychange', e => {
+            d.visibilityState === 'visible'
+              ? entry.target.play()
+              : entry.target.pause
+          })
+        });
+      };
 
 const slider = (slide_1, slide_2) => {
   for (const img in $slider) {
@@ -26,4 +45,9 @@ d.addEventListener('DOMContentLoaded', e => {
 
     if(e.target.matches('.image_2')) slider(1,3)
   })
+})
+
+d.addEventListener('load', e => {
+  const observer = new IntersectionObserver(callback, options)
+  $videos.forEach(video => observer.observe(video))
 })

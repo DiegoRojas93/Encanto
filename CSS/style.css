@@ -101,5 +101,10 @@ img {
   width: 100%;
   min-height: 100%;
   height: auto;
+  border-radius: var(--space);
+  -webkit-border-radius: var(--space);
+  -moz-border-radius: var(--space);
+  -ms-border-radius: var(--space);
+  -o-border-radius: var(--space);
 }
 
