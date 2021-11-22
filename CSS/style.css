@@ -3,9 +3,10 @@
   font-size: 62.5%;
   scroll-behavior: smooth;
 
-  --color-principal: rgb(18, 109, 86);
+  --color-principal: #054642;
   --color-secundario: rgb(5, 8, 54);
-  --color-terciario: yellow;
+  --color-terciario: red;
+  --color-cuaternario: yellow;
   --space: 1.6rem;
 }
 
