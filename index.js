@@ -47,7 +47,7 @@ d.addEventListener('DOMContentLoaded', e => {
   })
 })
 
-d.addEventListener('load', e => {
-  const observer = new IntersectionObserver(callback, options)
+window.addEventListener('load', (e) => {
+  const observer = new IntersectionObserver(callback, options);
   $videos.forEach(video => observer.observe(video))
 })
