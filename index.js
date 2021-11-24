@@ -1,8 +1,9 @@
 const d = document,
       $button = d.querySelector('#button-menu'),
-      $sidebar = d.querySelector('.sidebar'),
+      $show = d.querySelector('#show'),
       $slider = d.querySelector('.slider').querySelectorAll('img'),
       $ul = d.querySelector('ul'),
+      $audio = d.querySelector('audio'),
       $videos = d.querySelectorAll('video[data-smart-video]'),
       options = {
         threshold: 0.5
@@ -23,6 +24,8 @@ const d = document,
         });
       };
 
+let toggle = 0;
+
 const slider = (slide_1, slide_2) => {
   for (const img in $slider) {
     if (Object.hasOwnProperty.call($slider, img)) {
@@ -36,7 +39,8 @@ const slider = (slide_1, slide_2) => {
 
 d.addEventListener('DOMContentLoaded', e => {
   $button.addEventListener('click', e => {
-    $sidebar.classList.toggle('show');
+    $show.classList.toggle('active')
+    $audio.play();
   })
 
   $ul.addEventListener('click', e => {

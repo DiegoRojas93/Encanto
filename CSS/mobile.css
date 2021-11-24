@@ -3,7 +3,6 @@ body {
   min-width: 100vw;
   width: auto;
   height: auto;
-  background-color: var(--color-principal);
   position: relative;
 }
 
@@ -15,6 +14,8 @@ main {
   display: flex;
   flex-flow: column nowrap;
   background-color: var(--color-secundario);
+  background-image: url('../src/images/full-bloom.svg');
+  background-repeat: repeat;
 }
 
 header, footer {
@@ -44,33 +45,52 @@ nav {
   align-items: center;
 }
 
-.sidebar{
+/* .sidebar{
   display: none;
-  min-width: 0Vw;
-  min-height: 0Vh;
-}
+  width: 0Vw;
+  height: 100Vh;
+} */
 
-.show {
-  min-width: 100Vw;
-  min-height: 100Vh;
+/* .show {
   display: block;
-  /* background-color: #054642; */
+  width: 100Vw;
   background: radial-gradient(circle, rgba(10,109,102,1) 0%, rgba(4,51,48,1) 100%);
   overflow: hidden;
-  transform: translateX(100Vw);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 500;
-
   animation-name: movimiento;
   animation-duration: 0.3s;
   animation-timing-function: ease-out;
   animation-direction: normal;
   animation-fill-mode: forwards;
+} */
+
+.show {
+  display: block;
+  width: 100Vw;
+  height: 100Vh;
+  background: radial-gradient(circle, rgba(10,109,102,1) 0%, rgba(4,51,48,1) 100%);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  transform-origin: right;
+  transition: all 0.5s ease-in-out;
 }
+
+.show.active{
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+
+
 
 .show .details {
   padding: 5rem;
@@ -133,7 +153,7 @@ nav {
     -moz-transform: translateX(100Vw);
     -ms-transform: translateX(100Vw);
     -o-transform: translateX(100Vw);
-}
+  }
   to {
     transform: translateX(0rem);
     border-radius: 0%;
@@ -141,7 +161,7 @@ nav {
     -moz-transform: translateX(0rem);
     -ms-transform: translateX(0rem);
     -o-transform: translateX(0rem);
-}
+  }
 }
 
 
@@ -215,7 +235,7 @@ video{
 .colombiana {
   width: 50%;
   height: auto;
-  margin: 1rem;
+  margin: 0 0 1rem 1rem;
   float: right;
 
 }
@@ -300,7 +320,7 @@ video{
 
 .our_traditions {
   height: auto;
-  width: calc(100% - 1rem);
+  width: 100%;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: repeat(3, minmax(auto, max-content));
