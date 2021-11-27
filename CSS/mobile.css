@@ -16,6 +16,7 @@ main {
   background-color: var(--color-secundario);
   background-image: url('../src/images/full-bloom.svg');
   background-repeat: repeat;
+  position: relative;
 }
 
 header, footer {
@@ -45,30 +46,6 @@ nav {
   align-items: center;
 }
 
-/* .sidebar{
-  display: none;
-  width: 0Vw;
-  height: 100Vh;
-} */
-
-/* .show {
-  display: block;
-  width: 100Vw;
-  background: radial-gradient(circle, rgba(10,109,102,1) 0%, rgba(4,51,48,1) 100%);
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 500;
-  animation-name: movimiento;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-out;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-} */
-
 .show {
   display: block;
   width: 100Vw;
@@ -82,11 +59,19 @@ nav {
   right: 0;
   z-index: 500;
   transform-origin: right;
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
 }
 
-.show.active{
-  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+.show.open{
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-90deg);
+  -webkit-transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-90deg);
+  -moz-transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-90deg);
+  -ms-transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-90deg);
+  -o-transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-90deg);
 }
 
 
@@ -131,7 +116,7 @@ nav {
 }
 
 .show a{
-  color: var(--color-terciario);
+  color: red;
   font-weight: 600;
   text-align: center;
   transition: 0.5s;
@@ -145,24 +130,6 @@ nav {
   color:var(--color-cuaternario);
 }
 
-@keyframes movimiento {
-  from {
-    transform: translateX(100Vw);
-    border-radius: 25% 0 0 25%;
-    -webkit-transform: translateX(100Vw);
-    -moz-transform: translateX(100Vw);
-    -ms-transform: translateX(100Vw);
-    -o-transform: translateX(100Vw);
-  }
-  to {
-    transform: translateX(0rem);
-    border-radius: 0%;
-    -webkit-transform: translateX(0rem);
-    -moz-transform: translateX(0rem);
-    -ms-transform: translateX(0rem);
-    -o-transform: translateX(0rem);
-  }
-}
 
 
 section {
@@ -416,6 +383,7 @@ footer {
 }
 
 footer .text {
+  width: 100%;
   margin-top: var(--space);
   background-color: var(--color-terciario);
 }

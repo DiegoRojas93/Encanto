@@ -15,7 +15,7 @@
 <body>
 
   <section class="show" id="show">
-    <div class="details">
+    <div class="details" style="display: none;">
       <div class="detail"></div>
       <div class="detail"></div>
       <div class="detail"></div>
@@ -23,25 +23,26 @@
     </div>
     <article>
       <audio src="./src/sounds/door.wav" ></audio>
-      <a href="#home" target="_blank">Home</a>
-      <a href="#what_is_it" target="_blank">what is it</a>
-      <a href="#about2" target="_blank">Home</a>
-      <a href="#about3" target="_blank">Home</a>
-      <a href="#about4" target="_blank">Home</a>
-      <a href="#about5" target="_blank">Home</a>
+      <a href="#home">Home</a>
+      <a href="#what_is_it">What is it</a>
+      <a href="#our_people">Our People</a>
+      <a href="#our_clothes">Our Clothes</a>
+      <a href="#our_traditions">Our traditions</a>
+      <a href="#insparing_places">Insparing Places</a>
+      <a href="#others_dates">Others date</a>
     </article>
   </section>
 
   <main>
-    <header>
+    <header id="home">
       <figure>
         <img src="./src/images/colombia-logo.png" alt="Colombia-logo">
       </figure>
       <button id="button-menu"><img src="./src/images/menu.svg" alt="menu" /></button>
     </header>
 
-    <section class="container__main" id="home">
-      <video autoplay muted loop data-smart-video>
+    <section class="container__main">
+      <video  data-smart-video data-video-home>
         <source src="./src/videos/Encanto.mp4" type="video/mp4">
       </video>
       <div class="container__main-hero" style="z-index: 1">
@@ -51,7 +52,7 @@
     </section>
 
     <section id="what_is_it">
-      <h3>what's Encanto?</h3>
+      <h3>What's Encanto?</h3>
       <article>
         <img src="./src/images/Mirabel.jpg" alt="Maribel" class="Mirabel">
         <p>Encanto is a new production Disney based on Colombia culture; this is la latest Disney's movie number 60, where its tells about the Madrigal family and their magical house, Mirabel is the protagonist that unlike her family, she hasn't ever got a gift.</p>
@@ -67,11 +68,11 @@
     </section>
 
     <section class="youtube">
-      <h4>know its triller</h4>
+      <h4>Know its triller</h4>
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/togmdDHG3Pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
-    <section>
+    <section id="our_people">
       <h2>Our People</h2>
       <article class="pleople_grid">
         <div class="items text">
@@ -93,7 +94,7 @@
       </article>
     </section>
 
-    <section>
+    <section id="our_clothes">
       <h2>Our Clothes</h2>
       <article class="our_clothes">
         <div class="items image_1">
@@ -119,7 +120,7 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/tI2TrebU8rE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
-    <section class="our_traditions">
+    <section id="our_traditions">
       <h3>Our traditions</h3>
       <article class="our_traditions">
         <div class="image_1">
@@ -137,7 +138,7 @@
       </article>
     </section>
 
-    <section>
+    <section id='insparing_places'>
       <h3>Insparing Places</h3>
       <article class="slider">
         <div class="figure_1">
@@ -156,7 +157,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id='others_dates'>
       <h3>Others dates</h3>
       <article class="cards">
         <div class="card">
@@ -221,7 +222,7 @@
       <h3>see you in the theaters</h3>
       <section>
 
-        <video autoplay loop muted data-smart-video >
+        <video muted data-smart-video >
           <source src="./src/videos/Teaser.mp4" type="video/mp4" />
         </video>
       </section>

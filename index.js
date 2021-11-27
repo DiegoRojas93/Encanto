@@ -1,28 +1,37 @@
 const d = document,
+      w = window,
       $button = d.querySelector('#button-menu'),
       $show = d.querySelector('#show'),
       $slider = d.querySelector('.slider').querySelectorAll('img'),
       $ul = d.querySelector('ul'),
       $audio = d.querySelector('audio'),
       $videos = d.querySelectorAll('video[data-smart-video]'),
-      options = {
-        threshold: 0.5
-      },
       callback = (entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.play()
+
+          if (entry.isIntersecting && $show.classList.contains("open") && toggle % 2) {
+            entry.target.play();
           } else {
             entry.target.pause()
           }
 
-          d.addEventListener('visibilitychange', e => {
-            d.visibilityState === 'visible'
+          w.addEventListener('visibilitychange', e => {
+            (d.visibilityState === 'visible' && entry.isIntersecting)
               ? entry.target.play()
-              : entry.target.pause
+              : entry.target.pause()
           })
         });
-      };
+      },
+      open_close = (cb = undefined) =>{
+        $audio.play();
+        $show.classList.toggle('open');
+        if (cb !== undefined) cb()
+      },
+      callback_open = () => {
+        if (toggle === 1 && $show.classList.contains("open")) $videos[0].play();
+        if (!$show.classList.contains("open")) Array.from($videos).forEach( video => video.pause());
+      },
+      $menu = d.querySelector('#show').querySelectorAll('a');
 
 let toggle = 0;
 
@@ -38,10 +47,23 @@ const slider = (slide_1, slide_2) => {
 }
 
 d.addEventListener('DOMContentLoaded', e => {
+
+
   $button.addEventListener('click', e => {
-    $show.classList.toggle('active')
-    $audio.play();
-  })
+    toggle++
+    open_close(callback_open)
+  });
+
+  $menu.forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      if (anchor.getAttribute('href') === '#home'){
+        toggle++
+        open_close(callback_open)
+      } else {
+        open_close()
+      }
+    })
+  });
 
   $ul.addEventListener('click', e => {
 
@@ -51,7 +73,9 @@ d.addEventListener('DOMContentLoaded', e => {
   })
 })
 
-window.addEventListener('load', (e) => {
-  const observer = new IntersectionObserver(callback, options);
+w.addEventListener('load', e => {
+  const observer = new IntersectionObserver(callback,{threshold: 0.75});
   $videos.forEach(video => observer.observe(video))
-})
+});
+
+
