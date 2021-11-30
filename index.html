@@ -8,41 +8,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="stylesheet" href="./CSS/mobile.css" />
-  <link rel="stylesheet" href="./CSS/tablet.css" media='screen and (min-width: 768px)' />
+  <link rel="stylesheet" href="./CSS/tablet.css" media="screen and (min-width: 768px)" />
   <link rel="stylesheet" href="./CSS/desktop.css" media='screen and (min-width: 1200px)' />
   <title>Encanto</title>
 </head>
 <body>
 
-  <section class="show" id="show">
-    <div class="details" style="display: none;">
-      <div class="detail"></div>
-      <div class="detail"></div>
-      <div class="detail"></div>
-      <div class="detail"></div>
-    </div>
-    <article>
-      <audio src="./src/sounds/door.wav" ></audio>
-      <a href="#home">Home</a>
-      <a href="#what_is_it">What is it</a>
-      <a href="#our_people">Our People</a>
-      <a href="#our_clothes">Our Clothes</a>
-      <a href="#our_traditions">Our traditions</a>
-      <a href="#insparing_places">Insparing Places</a>
-      <a href="#others_dates">Others date</a>
-    </article>
-  </section>
+  <header id="home">
+    <figure>
+      <img src="./src/images/colombia-logo.png" alt="Colombia-logo">
+    </figure>
+    <button id="button-menu"><img src="./src/images/menu.svg" alt="menu" /></button>
+  </header>
+
+  <aside class="show" id="show">
+    <audio src="./src/sounds/door.wav" ></audio>
+    <a href="#home">Home</a>
+    <a href="#what_is_it">What is it</a>
+    <a href="#our_people">Our People</a>
+    <a href="#our_clothes">Our Clothes</a>
+    <a href="#our_traditions">Our traditions</a>
+    <a href="#insparing_places">Insparing Places</a>
+    <a href="#others_dates">Others date</a>
+  </aside>
+
 
   <main>
-    <header id="home">
-      <figure>
-        <img src="./src/images/colombia-logo.png" alt="Colombia-logo">
-      </figure>
-      <button id="button-menu"><img src="./src/images/menu.svg" alt="menu" /></button>
-    </header>
 
     <section class="container__main">
-      <video  data-smart-video data-video-home>
+      <video muted data-smart-video data-video-home>
         <source src="./src/videos/Encanto.mp4" type="video/mp4">
       </video>
       <div class="container__main-hero" style="z-index: 1">
@@ -53,13 +47,14 @@
 
     <section id="what_is_it">
       <h3>What's Encanto?</h3>
-      <article>
+      <article class="text__mirabel">
         <img src="./src/images/Mirabel.jpg" alt="Maribel" class="Mirabel">
-        <p>Encanto is a new production Disney based on Colombia culture; this is la latest Disney's movie number 60, where its tells about the Madrigal family and their magical house, Mirabel is the protagonist that unlike her family, she hasn't ever got a gift.</p>
+        <p>Encanto is a new production Disney based on Colombia culture; this is la latest Disney's movie number 60, where its tells about the Madrigal family and their magical house, Mirabel is the protagonist that unlike her family, she hasn't ever got a gift.
+        </p>
       </article>
       <img src="./src/images/Main_poster.jpg" alt="Poster">
 
-      <article>
+      <article class="colombiana_article">
         <img src="./src/images/Colombiana.jpg" alt="Maribel" class="colombiana">
         <p>Encanto is a new production Disney based on Colombia culture; this is la latest Disney's movie number 60, where its tells about the Madrigal family and their magical house, Mirabel is the protagonist that unlike her family, she hasn't a gift.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui itaque consectetur cupiditate. Atque repellendus eveniet vitae earum assumenda sapiente illo cupiditate, temporibus architecto deserunt qui voluptas fugiat alias modi eligendi?
@@ -67,10 +62,14 @@
       </article>
     </section>
 
-    <section class="youtube">
-      <h4>Know its triller</h4>
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/togmdDHG3Pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section>
+      <h3>Know its triller</h3>
+      <article class="youtube">
+        <iframe  src="https://www.youtube-nocookie.com/embed/togmdDHG3Pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
     </section>
+
+
 
     <section id="our_people">
       <h2>Our People</h2>
@@ -115,24 +114,27 @@
       </article>
     </section>
 
-    <section class="youtube">
+    <section>
       <h4>Get to know more</h4>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/tI2TrebU8rE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <article class="youtube">
+        <iframe src="https://www.youtube.com/embed/tI2TrebU8rE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
     </section>
+
 
     <section id="our_traditions">
       <h3>Our traditions</h3>
       <article class="our_traditions">
-        <div class="image_1">
+        <div class="items image_1">
           <img src="./src/images/Elma.jpg" alt="Elma">
         </div>
-        <div class="">
+        <div class="items text">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi asperiores molestiae commodi odio molestias cum sapiente dolorum at neque suscipit enim quisquam velit illum vero quae, architecto atque hic ullam!</p>
         </div>
-        <div class="image_2">
+        <div class="items image_2">
           <img src="./src/images/Dia_de_velitas_2.jpg" alt="Dia_de_velitas_1" />
         </div>
-        <div class="image_1">
+        <div class="items image_3">
           <img src="./src/images/Dia_de_velitas_1.jpg" alt="Dia_de_velitas_1" />
         </div>
       </article>
@@ -141,13 +143,20 @@
     <section id='insparing_places'>
       <h3>Insparing Places</h3>
       <article class="slider">
-        <div class="figure_1">
-          <img src="./src/images/Encantos_River.jpeg" alt="Encantos_River" class="no_hide" />
-          <img src="./src/images/Mirabel.jpg" alt="Mirabels">
+        <div class="figures">
+          <div class="figure_1">
+            <img src="./src/images/Encantos_River.jpeg" alt="Encantos_River" class="no_hide" />
+            <img src="./src/images/Mirabel.jpg" alt="Mirabels">
+          </div>
+          <div class="figure_2">
+            <img src="./src/images/Caño_cristales.jpg" alt="Caño_cristales" class="no_hide" />
+            <img src="./src/images/Velez.jpeg" alt="Velez">
+          </div>
         </div>
-        <div class="figure_2">
-          <img src="./src/images/Caño_cristales.jpg" alt="Caño_cristales" class="no_hide" />
-          <img src="./src/images/Velez.jpeg" alt="Velez">
+        <div class="text_container">
+          <p class="text_no_hide"> 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ducimus itaque animi quos dolore sed blanditiis ex ut odio voluptas. Aperiam unde corrupti aliquid, perspiciatis iure ex rem possimus totam.</p>
+          <p class=""> 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ducimus itaque animi quos dolore sed blanditiis ex ut odio voluptas. Aperiam unde corrupti aliquid, perspiciatis iure ex rem possimus totam.</p>
+          <p class=""> 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ducimus itaque animi quos dolore sed blanditiis ex ut odio voluptas. Aperiam unde corrupti aliquid, perspiciatis iure ex rem possimus totam.</p>
         </div>
       </article>
       <ul>
@@ -214,23 +223,24 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, ut dolores aperiam maxime nobis quis voluptate a magni? Quaerat expedita nobis, quam corrupti est neque necessitatibus dolore molestias hic dignissimos!</p>
           </div>
         </div>
+
       </article>
     </section>
 
 
-    <footer>
-      <h3>see you in the theaters</h3>
-      <section>
-
-        <video muted data-smart-video >
-          <source src="./src/videos/Teaser.mp4" type="video/mp4" />
-        </video>
-      </section>
-      <div class="text">
-        <p>Diego Fernando Rojas Quintero <a href="https://twitter.com/DiegoFrontend" target="_blank">@DiegoFrontend</a> • Todos los izquierdos reservados © 2021.</p>
-      </div>
-    </footer>
   </main>
+  <footer>
+    <h3>see you in the theaters</h3>
+    <section>
+
+      <video muted data-smart-video >
+        <source src="./src/videos/Teaser.mp4" type="video/mp4" />
+      </video>
+    </section>
+    <div class="text">
+      <p>Diego Fernando Rojas Quintero <a href="https://twitter.com/DiegoFrontend" target="_blank">@DiegoFrontend</a> • Todos los izquierdos reservados © 2021.</p>
+    </div>
+  </footer>
 
 
   <script src="./index.js"></script>

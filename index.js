@@ -3,6 +3,7 @@ const d = document,
       $button = d.querySelector('#button-menu'),
       $show = d.querySelector('#show'),
       $slider = d.querySelector('.slider').querySelectorAll('img'),
+      $texts = d.querySelector('.slider').querySelectorAll('p'),
       $ul = d.querySelector('ul'),
       $audio = d.querySelector('audio'),
       $videos = d.querySelectorAll('video[data-smart-video]'),
@@ -35,15 +36,22 @@ const d = document,
 
 let toggle = 0;
 
-const slider = (slide_1, slide_2) => {
+const slider = (slide_1, slide_2, number_text) => {
   for (const img in $slider) {
     if (Object.hasOwnProperty.call($slider, img)) {
       if ($slider[img].className === 'no_hide') $slider[img].classList.remove('no_hide')
     }
   }
 
+  for (const text in $texts) {
+    if (Object.hasOwnProperty.call($texts, text)) {
+      if ($texts[text].className === 'text_no_hide') $texts[text].classList.remove('text_no_hide')
+    }
+  }
+
   $slider[slide_1].classList.add('no_hide')
   $slider[slide_2].classList.add('no_hide')
+  $texts[number_text].classList.add('text_no_hide')
 }
 
 d.addEventListener('DOMContentLoaded', e => {
@@ -67,9 +75,9 @@ d.addEventListener('DOMContentLoaded', e => {
 
   $ul.addEventListener('click', e => {
 
-    if(e.target.matches('.image_1')) slider(0,2)
+    if(e.target.matches('.image_1')) slider(0,2,0)
 
-    if(e.target.matches('.image_2')) slider(1,3)
+    if(e.target.matches('.image_2')) slider(1,3,1)
   })
 })
 
