@@ -1,0 +1,36 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    ". footer";
+}
+
+header {
+  grid-area: header;
+}
+
+.show {
+  grid-area: aside;
+  height: 100Vh;
+  width: 20Vw;
+  bottom: 0;
+  flex-flow: column nowrap;
+}
+
+main {
+  grid-area: main;
+  min-width: 80Vw;
+}
+
+footer {
+  grid-area: footer;
+}
+
+section {
+  width: 100%;
+}
+
+#what_is_it img {
+  min-height: initial;
+}

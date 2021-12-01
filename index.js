@@ -32,9 +32,18 @@ const d = document,
         if (toggle === 1 && $show.classList.contains("open")) $videos[0].play();
         if (!$show.classList.contains("open")) Array.from($videos).forEach( video => video.pause());
       },
-      $menu = d.querySelector('#show').querySelectorAll('a');
+      $menu = d.querySelector('#show').querySelectorAll('a'),
+      mediaFunction = (e) => {
+        if (e.matches) {
+          $show.classList.add('open');
+          $videos[0].play();
+        } else {
+          $show.classList.remove('open')
+        }
+      };
 
-let toggle = 0;
+let toggle = 0,
+    breakPoint = w.matchMedia('(max-width: 768px)');
 
 const slider = (slide_1, slide_2, number_text) => {
   for (const img in $slider) {
@@ -55,7 +64,6 @@ const slider = (slide_1, slide_2, number_text) => {
 }
 
 d.addEventListener('DOMContentLoaded', e => {
-
 
   $button.addEventListener('click', e => {
     toggle++
@@ -78,7 +86,9 @@ d.addEventListener('DOMContentLoaded', e => {
     if(e.target.matches('.image_1')) slider(0,2,0)
 
     if(e.target.matches('.image_2')) slider(1,3,1)
-  })
+  });
+
+  breakPoint.addListener(mediaFunction)
 })
 
 w.addEventListener('load', e => {

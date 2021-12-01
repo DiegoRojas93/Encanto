@@ -102,17 +102,11 @@ section {
   height: auto;
   width: 100%;
   padding: 0rem;
-
 }
 
 video{
   width: 100%;
   height: auto;
-  /* position: absolute;
-  top: 0;
-  bottom :0;
-  left: 0;
-  right: 0; */
 }
 
 .container__main-hero{
@@ -122,11 +116,6 @@ video{
   width: 100%;
   height: auto;
   padding: var(--space);
-  /* position: absolute;
-  top: 0;
-  bottom :0;
-  left: 0;
-  right: 0; */
 }
 
 .container__main-hero h1,
@@ -359,17 +348,18 @@ footer {
   height: auto;
   width: 100%;
   padding: 0rem;
-  flex-flow: column;
+  flex-flow: column nowrap;
 }
 
-footer .text {
+footer .copyright {
   width: 100%;
   margin-top: var(--space);
   background-color: var(--color-terciario);
 }
 
-footer .text P {
+footer .copyright P {
   text-align: center;
+  padding: var(--space);
 }
 
 footer video {
@@ -378,4 +368,15 @@ footer video {
   -moz-border-radius: var(--space);
   -ms-border-radius: var(--space);
   -o-border-radius: var(--space);
+}
+
+.links{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.links a {
+  height: auto;
+  width: 6rem;
+  margin: 0;
 }

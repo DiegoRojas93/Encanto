@@ -135,3 +135,16 @@ video[data-video-home]{
 .card {
   margin-bottom: 0;
 }
+
+
+footer section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin-bottom: 0;
+}
+
+footer video {
+  width: calc(100% - 4rem);
+  align-self: center;
+}
