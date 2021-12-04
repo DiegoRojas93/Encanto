@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Esta es una comparacion de LA pelicula Encanto de disney y Colombia" />
+  <meta name="description" content="This is a comparativive of the Disney's Encanto and Colombia" />
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./CSS/style.css">
@@ -36,29 +36,45 @@
   <main>
 
     <section class="container__main">
-      <video muted data-smart-video data-video-home>
-        <source src="./src/videos/Encanto.mp4" type="video/mp4">
-      </video>
-      <div class="container__main-hero" style="z-index: 1">
-        <h1>Colombia, the Encanto's Disney</h1>
-        <h3>This is a page where you can know about Colombia thanks to Encanto's Disney</h3>
-      </div>
+      <article>
+        <video muted data-smart-video data-video-home poster="./src/images/House.jpg">
+          <source src="./src/videos/Encanto.mp4" type="video/mp4">
+        </video>
+        <div class="container__main-hero" style="z-index: 1">
+          <h1>Colombia, the Encanto's Disney</h1>
+          <h3>This is a page where you can know about Colombia thanks to Encanto's Disney</h3>
+        </div>
+      </article>
+      <article class="container__main-posters">
+        <div class="poster_1">
+          <img src="./src/images/Family.jpg" alt="Family" srcset="">
+        </div>
+        <div class="poster_2">
+          <img src="./src/images/Polvora.webp" alt="Polvora" srcset="">
+        </div>
+        <div class="poster_3">
+          <img src="./src/images/Tucan.jpeg" alt="Tucan" srcset="">
+        </div>
+      </article>
     </section>
 
     <section id="what_is_it">
       <h3>What's Encanto?</h3>
-      <article class="text__mirabel">
+      <div class="text__mirabel">
         <img src="./src/images/Mirabel.jpg" alt="Maribel" class="Mirabel">
         <p>Encanto is a new production Disney based on Colombia culture; this is la latest Disney's movie number 60, where its tells about the Madrigal family and their magical house, Mirabel is the protagonist that unlike her family, she hasn't ever got a gift.
         </p>
-      </article>
-      <img src="./src/images/Main_poster.jpg" alt="Poster">
+      </div>
+      <article class="what_is_it-main">
+        <div>
+          <img src="./src/images/Main_poster.jpg" alt="Poster" class="poster">
+        </div>
+        <div class="colombiana_article">
+          <img src="./src/images/Colombiana.jpg" alt="Maribel" class="colombiana">
 
-      <article class="colombiana_article">
-        <img src="./src/images/Colombiana.jpg" alt="Maribel" class="colombiana">
-        <p>Encanto is a new production Disney based on Colombia culture; this is la latest Disney's movie number 60, where its tells about the Madrigal family and their magical house, Mirabel is the protagonist that unlike her family, she hasn't a gift.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui itaque consectetur cupiditate. Atque repellendus eveniet vitae earum assumenda sapiente illo cupiditate, temporibus architecto deserunt qui voluptas fugiat alias modi eligendi?
-        </p>
+          <p>Encanto is a new production Disney based on Colombia culture; this is la latest Disney's movie number 60, where its tells about the Madrigal family and their magical house, Mirabel is the protagonist that unlike her family, she hasn't a gift.
+          </p>
+        </div>
       </article>
     </section>
 
@@ -252,6 +268,6 @@
   </footer>
 
 
-  <script src="./index.js"></script>
+  <script src="./index.js" type="module"></script>
 </body>
 </html>

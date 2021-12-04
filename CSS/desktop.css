@@ -8,6 +8,7 @@ body {
 
 header {
   grid-area: header;
+  height: 6rem;
 }
 
 .show {
@@ -31,6 +32,40 @@ section {
   width: 100%;
 }
 
-#what_is_it img {
+.container__main-posters {
+  width: 75%;
+  padding: 0 6rem 0 0;
+  display: flex;
+  bottom: -10rem;
+  right: 0;
+}
+
+.what_is_it-main {
+  width: calc(100% - 6rem);
+  display: grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap: 6rem;
+}
+
+
+.poster{
+  grid-column: 1 / 2;
+
   min-height: initial;
+}
+
+.colombiana_article {
+  grid-column: 2 / 3;
+
+}
+
+.colombiana_article p {
+  order: 0;
+  
+}
+
+.colombiana {
+  width: 75%;
+  float: right;
+  margin: 0 0 0 6rem;
 }
