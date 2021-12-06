@@ -309,7 +309,7 @@ ul {
 }
 
 .card {
-  background-color: #b90045;
+  background-color: var(--color-terciario);
   box-shadow: 0 0 30px rgba(0,0,0,0.18);
   overflow: hidden;
   /* box-shadow: 5px 5px 5px black; */

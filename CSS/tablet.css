@@ -43,17 +43,19 @@ video[data-video-home]{
 }
 
 .container__main-hero{
-  height: 100%;
+  width: 100%;
   flex-grow: 1;
   background: linear-gradient(to top right, black, rgba(0, 0, 0, 0.7) , transparent);
   height: auto;
-  padding: var(--space);
+  padding: 6rem;
   position: absolute;
   top: 0;
   bottom :0;
   left: 0;
   right: 0;
   z-index: 1;
+
+
 }
 
 .container__main-posters {
@@ -96,6 +98,10 @@ video[data-video-home]{
   height: auto;
   margin: 0 5rem 0 0;
   float: none;
+}
+
+.colombiana_article p {
+  width: 50%;
 }
 
 .pleople_grid, .our_clothes, .our_traditions {

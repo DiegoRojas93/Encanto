@@ -42,7 +42,10 @@ const callback = (entries) => {
     if (cb !== undefined) cb();
   },
   callback_open = () => {
-    if (toggle === 1 && $show.classList.contains("open")) $videos[0].play();
+    if (toggle === 1 && $show.classList.contains("open")) {
+      $videos[0].removeAttribute('muted');
+      $videos[0].play();
+    }
     if (!$show.classList.contains("open"))
       Array.from($videos).forEach((video) => video.pause());
   },
