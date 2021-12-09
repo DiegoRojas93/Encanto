@@ -6,6 +6,10 @@ body {
   position: relative;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 main {
   min-width: 100Vw;
   min-height: 100Vh;
