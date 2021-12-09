@@ -95,8 +95,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
   });
 
   $ul.addEventListener("click", (e) => {
-    if (e.target.matches(".image_1")) slider(0, 2, 0);
-    if (e.target.matches(".image_2")) slider(1, 3, 1);
+    if (e.target.matches(".image_1")) slider(0, 3, 0);
+    if (e.target.matches(".image_2")) slider(1, 4, 1);
+    if (e.target.matches(".image_3")) slider(2, 5, 2);
   });
 
   breakPoint.addListener(mediaFunction);
